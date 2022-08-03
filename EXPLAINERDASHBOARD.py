@@ -81,24 +81,24 @@ print("Accuracy: %.2f%%" % (accuracy * 100.0))
 # Create the explainer object
 explainer = ClassifierExplainer(xgb_mod, X_test, y_test,model_output='logodds')
 
-# Create individual component plants using Inexplainer
+# Create individual component using Inexplainer
 
-ie = InlineExplainer(explainer)
+iex = InlineExplainer(explainer)
 
 # SHAP overview
-ie.shap.overview()
+iex.shap.overview()
 
 # SHAP interactions
-ie.shap.interaction_dependence()
+iex.shap.interaction_dependence()
 
 # Model Stats
-ie.classifier.model_stats()
+iex.classifier.model_stats()
 
 # SHAP contribution
-ie.shap.contributions_graph()
+iex.shap.contributions_graph()
 
 # SHAP dependence
-ie.shap.dependence()
+iex.shap.dependence()
 
 
 
