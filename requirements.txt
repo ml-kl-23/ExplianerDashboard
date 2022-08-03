@@ -1,0 +1,8 @@
+shap
+shapash
+xgboost
+datatable
+category_encoders 
+scikit-learn
+explainerdashboard
+Jinja2==3.0.3
